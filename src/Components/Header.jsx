@@ -10,7 +10,7 @@ const PortfolioHeader = () => {
 
   const openResume = () => {
     window.open(
-      "https://drive.google.com/file/d/105DvuxVyBHJ2KIZHIKOKWAoRm3NS7zvk/view?usp=sharing ",
+      "https://drive.google.com/file/d/105DvuxVyBHJ2KIZHIKOKWAoRm3NS7zvk/view?usp=sharing",
       "_blank"
     );
   };
