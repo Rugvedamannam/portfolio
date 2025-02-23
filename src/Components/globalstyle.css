@@ -1,0 +1,240 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 15px 30px;
+  color: white;
+  /* z-index: -1000; */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  height: auto;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 22px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-links li:hover,
+.nav-links .active {
+  color: #18AE85;
+  border-bottom: 2px solid #18AE85;
+}
+
+/* Menu Bar */
+.menu-bar {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.menu-bar-icon {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.nav-links.active {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #1a1a1a;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.nav-links.active li {
+  width: 100%;
+  text-align: center;
+}
+
+/* Theme Toggle */
+.toggle-theme input {
+  display: none;
+}
+
+.toggle-theme label {
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  display: block;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-theme label::after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  transition: 0.3s;
+}
+
+.toggle-theme input:checked + label {
+  background: #18AE85;
+}
+
+.toggle-theme input:checked + label::after {
+  left: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.center-content {
+  text-align: center;
+}
+
+.name {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.typing-effect {
+  font-size: 24px;
+  display: inline-block;
+  border-right: 2px solid black;
+  white-space: nowrap;
+  overflow: hidden;.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 15px 30px;
+  color: white;
+  z-index: 1000; /* Ensures it stays above other elements */
+}
+
+  width: 0;
+  animation: typing 3s steps(24) forwards, blink 0.8s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 22ch; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #18AE85;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 767px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-bar {
+    display: flex;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+}
+/* Resume Button */
+.resume-btn {
+  background-color: #18AE85;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.resume-btn:hover {
+  background-color: #12805f;
+  transform: scale(1.05);
+}
+
+.resume-btn:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 767px) {
+  .resume-btn {
+    width: 90%;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+}

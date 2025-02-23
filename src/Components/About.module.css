@@ -1,0 +1,118 @@
+/* Main Container */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    overflow-x: hidden; /* ✅ Ensures content stays within viewport */
+}
+
+/* About Heading */
+.about {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Main Body */
+.body {
+    display: flex;
+    flex-wrap: wrap; /* ✅ Prevents items from overflowing */
+    width: 100%;
+    max-width: 1200px;
+    gap: 30px;
+    align-items: center;
+    justify-content: center; /* ✅ Keeps content centered */
+    padding: 0 15px; /* ✅ Prevents content from touching screen edges */
+}
+
+/* Left Section */
+.left {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    padding: 20px;
+    max-width: 600px;
+    word-wrap: break-word; 
+    margin-left: 25px;
+    /* ✅ Prevents text from breaking layout */
+}
+
+/* Right Section - Image */
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.imageWrapper {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ✅ RESPONSIVE FIXES */
+@media screen and (max-width: 768px) {
+    .body {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .left, .right {
+        width: 100%;
+        text-align: center;
+        margin-left: -12px;
+    }
+
+    .imageWrapper {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+/* ✅ Fixes for Smaller Screens */
+@media screen and (max-width: 425px) {
+    .imageWrapper {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .left {
+        font-size: 16px;
+    }
+}
+
+/* ✅ Final Adjustments for Smallest Phones (320px) */
+@media screen and (max-width: 320px) {
+    .about {
+        font-size: 28px;
+    }
+
+    .imageWrapper {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .left {
+        font-size: 15px;
+    }
+}

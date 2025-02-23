@@ -1,0 +1,184 @@
+.educationContainer {
+    text-align: center;
+    margin: 50px 0;
+    position: relative;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Timeline Wrapper */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+/* Blue Line - Visible ONLY from 1440px to 769px */
+@media screen and (min-width: 769px) {
+    .blueLine {
+        position: absolute;
+        width: 4px;
+        height: 100%;
+        background-color: blue;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        border-radius: 5px;
+    }
+}
+
+/* Hide Blue Line ONLY from 768px to 320px */
+@media screen and (max-width: 768px) {
+    .blueLine {
+        display: none;
+    }
+}
+
+.educationEntry {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 45%;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-width: 0; /* Ensures it shrinks in flex containers */
+}
+
+/* Desktop View */
+.educationLeft {
+    align-self: flex-start;
+    text-align: left;
+}
+
+.educationRight {
+    align-self: flex-end;
+    text-align: left;
+}
+
+.details {
+    text-align: left;
+}
+
+.institution {
+    color: blue;
+    font-weight: bold;
+}
+
+/* Date */
+.date {
+    background: #2f6ed6;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.dateRight {
+    left: calc(100% + 20px);
+}
+
+.dateLeft {
+    right: calc(100% + 20px);
+}
+
+/* Responsive Cards */
+@media screen and (max-width: 768px) {
+    .timeline {
+        width: 95%;
+    }
+
+    .educationEntry {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .educationLeft, .educationRight {
+        left: 0;
+        right: 0;
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .date {
+        position: relative;
+        left: 0;
+        right: 0;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
+
+/* 🔹 FIX for 425px and below */
+@media screen and (max-width: 425px) {
+    .timeline {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .institution{
+        color: black;
+    }
+    .educationEntry {
+        width: 80% !important; /* Reduce width */
+        max-width: 300px !important; /* Set max width */
+        padding: 12px !important; /* Reduce padding */
+        margin: 15px auto !important; /* Center properly */
+    }
+
+    .date {
+        font-size: 12px !important;
+        padding: 5px 8px !important;
+        width: 120px !important; /* Adjust width */
+    }
+}
+
+/* 🔹 Extra Fix for 375px */
+@media screen and (max-width: 375px) {
+    .educationEntry {
+        width: 85% !important;
+        max-width: 280px !important;
+        padding: 10px;
+    }
+
+    .date {
+        width: 110px !important;
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+}
+
+/* 🔹 Extra Fix for 320px */
+@media screen and (max-width: 320px) {
+    .educationEntry {
+        width: 90% !important;
+        max-width: 260px !important;
+        padding: 8px;
+    }
+    .date {
+        width: 100px !important;
+        font-size: 10px;
+        padding: 3px 5px;
+    }
+}

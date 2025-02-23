@@ -1,0 +1,143 @@
+.contactContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1440px;  /* ✅ Prevents it from expanding beyond 1440px */
+    width: 100%;
+    margin: 0 auto;  /* ✅ Centers the container */
+    background-color: white;
+    color: #1A1A1A;
+    padding: 50px;
+    gap: 40px;
+    box-sizing: border-box; /* ✅ Prevents content from pushing outside */
+    overflow: hidden; /* ✅ Ensures no unwanted scrolling */
+}
+
+  
+  /* Left Section - Contact Info */
+  .contactInfo {
+    flex: 1;
+    padding: 30px;
+    max-width: 450px;
+    text-align: left;
+    /* border: 1px solid black; */
+  
+  }
+  
+  .contactInfo h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #3E2B47; /* Dark purple heading */
+  }
+  
+  .contactInfo p {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 18px;
+    gap: 12px;
+  }
+  
+  .icon {
+    color: #12805f; /* Warm brownish-orange */
+    font-size: 24px;
+  }
+  
+  /* Right Section - Contact Form */
+  .contactFormBox {
+    flex: 1;
+    max-width: 500px;
+    padding: 30px;
+    /* border: 1px solid black; */
+  
+  }
+  
+  .heading {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: left;
+    color: #2B1A33; /* Darker purple for better contrast */
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Labels */
+  .contactForm label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #3E2B47;
+  }
+  
+  /* Input Fields */
+  .input,
+  .textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #3E2B47;
+    border-radius: 8px;
+    font-size: 18px;
+    background: white; /* Slightly darker than the background */
+    color: #1A1A1A;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .input:focus,
+  .textarea:focus {
+    border-color: #12805f; /* Brownish-orange highlight */
+  }
+  
+  /* Textarea */
+  .textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  /* Send Button */
+  .sendButton {
+    background-color: #12805f; /* Warm brown button */
+    color: white;
+    padding: 14px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .sendButton:hover {
+    background-color: #12805f;
+  }
+  
+  .buttonIcon {
+    font-size: 22px;
+  }
+  
+  /* Status Message */
+  .statusMessage {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #008000; /* Success Green */
+  }
+  
+  @media screen and (max-width:330px)
+  {
+     .contactInfo{
+      max-width: 320px;
+     }
+     .icon{
+        display: none;
+    }
+  }

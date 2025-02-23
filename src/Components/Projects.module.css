@@ -1,0 +1,122 @@
+.projectContainer {
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+}
+  
+.heading {
+    font-size: 34px;
+    color: #3E2B47;
+    margin-bottom: 50px;
+}
+  
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+  
+.card {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    height: 350px; /* Ensures all cards are the same height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+  
+.card:hover {
+    transform: translateY(-5px);
+}
+  
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+  
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.linkIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+  
+.linkIcon:hover {
+    background: #12805f;
+}
+  
+.title {
+    font-size: 22px;
+    color: #2B1A33;
+    margin-top: 15px;
+}
+  
+.techStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 15px;
+}
+  
+.techItem {
+    background-color: #12805f;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+  
+/* 🔹 Fix for 375px and Below */
+@media screen and (max-width: 375px) {
+    .cardContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90% !important; /* Keeps card within screen */
+        max-width: 280px !important;
+        height: auto; /* Allows flexible height */
+        padding: 15px; /* Reduce padding */
+    }
+}
+
+/* 🔹 Fix for 330px and Below */
+@media screen and (max-width: 330px) {
+    .card {
+        width: 85% !important; /* Prevents overflow */
+        max-width: 260px !important;
+        padding: 12px;
+    }
+}
+
+/* 🔹 Fix for 320px */
+@media screen and (max-width: 320px) {
+    .card {
+        width: 95% !important;
+        max-width: 250px !important;
+        padding: 10px;
+    }
+}
