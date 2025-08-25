@@ -24,6 +24,13 @@ const projects = [
     // link: "",
     image: "https://pics.craiyon.com/2024-09-25/82q--MsvTbGj98uEC7_AAw.webp", 
   },
+  {
+    title: "UConnect",
+    description: "A MERN platform for students to join clubs, connect, and collaborate securely.",
+    tech: ["React JS", "Express.js","MongoDB","Web Sockets"],
+    link: "https://uconnectwebsite.onrender.com",
+    image: "https://k-12experts.com/wp-content/uploads/2024/07/Communication-and-Collaboration-Essential-Skills-for-Students-From-K-to-12.jpg", 
+  }
 ];
 
 const Project = () => {
