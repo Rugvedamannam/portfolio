@@ -11,6 +11,7 @@ const PortfolioHeader = () => {
   const openResume = () => {
     window.open(
       "https://drive.google.com/file/d/11vq7-l0rydzeqnumpPO-3C3joRk30HwC/view?usp=sharing"
+      "_blank"
     );
   };
 
