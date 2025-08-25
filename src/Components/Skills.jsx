@@ -87,6 +87,30 @@ const Skills = () => {
                         <h3>SQL</h3>
                     </div>
                 </div>
+                <div className={styles.card}>
+                    <div className={styles.cardImage}>
+                        <img src="https://logos-world.net/wp-content/uploads/2022/02/ServiceNow-Logo.png" alt="Skill" style={{width:'70%', height:'70%'}} />
+                    </div>
+                    <div className={styles.cardContent}>
+                        <h3>ServiceNow</h3>
+                    </div>
+                </div>
+                <div className={styles.card}>
+                    <div className={styles.cardImage}>
+                        <img src="https://cdn.prod.website-files.com/5f10ed4c0ebf7221fb5661a5/5f2f630735aafe2300802edd_git-logo.png" alt="Skill" style={{width:'70%', height:'70%'}} />
+                    </div>
+                    <div className={styles.cardContent}>
+                        <h3>Git</h3>
+                    </div>
+                </div>
+                <div className={styles.card}>
+                    <div className={styles.cardImage}>
+                        <img src="https://cdn.prod.website-files.com/5f10ed4b2ae6bc09c03f5d7a/64959d5f65a257fb51a4259c_github.png" alt="Skill" style={{width:'70%', height:'70%'}} />
+                    </div>
+                    <div className={styles.cardContent}>
+                        <h3>GitHub</h3>
+                    </div>
+                </div>
             </div>
         </div>
     );
